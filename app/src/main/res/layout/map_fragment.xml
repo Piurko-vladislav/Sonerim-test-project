@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/fragment_map_view"
+        tilesource="Mapnik"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_map_fragment_filters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="15dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_map_fragment_filters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:backgroundTint="@color/colorPrimary"
+            android:elevation="6dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_layer"
+            android:tint="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:pressedTranslationZ="12dp"
+            app:backgroundTint="@color/transparent"/>
+
+        <include layout="@layout/custom_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/fab_map_fragment_filters"
+            app:layout_constraintTop_toBottomOf="@+id/fab_map_fragment_filters"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|start"
+        android:orientation="vertical">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_zoom_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:backgroundTint="#FFFFFF"
+            android:elevation="6dp"
+            android:src="@drawable/ic_plus"
+            android:tint="@color/colorPrimaryDark"
+            app:pressedTranslationZ="12dp"
+            app:backgroundTint="@color/transparent"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_zoom_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:backgroundTint="#FFFFFF"
+            android:elevation="6dp"
+            android:src="@drawable/ic_minus"
+            android:tint="@color/colorPrimaryDark"
+            app:pressedTranslationZ="12dp"
+            app:backgroundTint="@color/transparent"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|bottom"
+        android:orientation="vertical"
+        app:layout_anchor="@+id/fragment_map_view"
+        app:layout_anchorGravity="center">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_70per_pf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="15dp">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_refresh_markers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:backgroundTint="#FFFFFF"
+            android:elevation="6dp"
+            android:src="@drawable/ic_refresh"
+            android:tint="@color/colorPrimaryDark"
+            app:pressedTranslationZ="12dp"
+            app:backgroundTint="@color/transparent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

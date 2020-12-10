@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_custom_menu_filter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_menu"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_height="match_parent">
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/ib_custom_menu_mines_anti_tank"-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginStart="100dp"-->
+<!--                android:layout_marginEnd="50dp"-->
+<!--                android:adjustViewBounds="true"-->
+<!--                android:background="@drawable/bg_mine"-->
+<!--                android:scaleType="center"-->
+<!--                android:src="@drawable/ic_anti_tank_mine"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/ib_custom_menu_mines_hide"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/ib_custom_menu_mines_hide"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/ib_custom_menu_mines_hide"-->
+<!--                android:contentDescription="@string/cmm_image_description" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_custom_menu_mines_anti_tank"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:gravity="center"-->
+<!--                android:lines="1"-->
+<!--                android:text="@string/cmm_anti_tank"-->
+<!--                android:textColor="@color/colorPrimaryDark"-->
+<!--                android:textSize="12sp"-->
+<!--                app:layout_constraintBottom_toBottomOf="@+id/tv_custom_menu_mines_hide"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/ib_custom_menu_mines_anti_tank"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/ib_custom_menu_mines_anti_tank"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/tv_custom_menu_mines_hide" />-->
+
+            <TextView
+                android:id="@+id/tv_custom_menu_header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center"
+                android:text="@string/map_type"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageButton
+                android:id="@+id/ib_default_map"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="25dp"
+                android:adjustViewBounds="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bg_mine"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_default_map"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_custom_menu_header"
+                android:contentDescription="@string/cmm_image_description"
+                />
+
+            <TextView
+                android:id="@+id/tv_default_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="@string/cmm_map_default"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/ib_default_map"
+                app:layout_constraintStart_toStartOf="@+id/ib_default_map"
+                app:layout_constraintTop_toBottomOf="@+id/ib_default_map" />
+
+            <ImageButton
+                android:id="@+id/ib_terrain_map"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:adjustViewBounds="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_mine"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_terrain_map"
+                app:layout_constraintBottom_toBottomOf="@+id/ib_default_map"
+                app:layout_constraintStart_toEndOf="@+id/ib_default_map"
+                app:layout_constraintTop_toTopOf="@+id/ib_default_map"
+                android:contentDescription="@string/cmm_image_description"
+                />
+
+            <TextView
+                android:id="@+id/tv_terrain_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/cmm_map_terrain"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_default_map"
+                app:layout_constraintEnd_toEndOf="@+id/ib_terrain_map"
+                app:layout_constraintStart_toStartOf="@+id/ib_terrain_map"
+                app:layout_constraintTop_toTopOf="@+id/tv_default_map" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
